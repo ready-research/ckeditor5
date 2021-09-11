@@ -26,5 +26,5 @@ export default function normalizeClipboardData( data ) {
 			return spaces;
 		} )
 		// Remove all HTML comments.
-		.replace( /<!--[\s\S]*?-->/g, '' );
+		.replace(/<!--(?:(?!<!--[\s\S])*?)-->/g, '' );
 }
